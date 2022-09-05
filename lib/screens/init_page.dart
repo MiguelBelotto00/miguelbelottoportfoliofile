@@ -34,7 +34,7 @@ class _InitState extends State<InitPage> {
             const HeaderSpoti(),
             Padding(
               padding: const EdgeInsets.only(top: 8.0, left: 25.0),
-              child: Text("Algunos Proyectos",
+              child: Text("Mis Proyectos",
                   style: GoogleFonts.sourceSansPro(
                       fontSize: screenSize.width * 0.015,
                       color: Commons.colorWhiteBase,
