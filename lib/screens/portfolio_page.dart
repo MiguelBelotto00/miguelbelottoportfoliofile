@@ -15,6 +15,10 @@ class _PortfolioPageState extends State<PortfolioPage> {
       width: screenSize.width * 0.82,
       height: screenSize.height,
       color: Colors.pink,
+      child: Container(
+        alignment: Alignment.center,
+        color: Colors.red,
+      ),
     );
   }
 }
