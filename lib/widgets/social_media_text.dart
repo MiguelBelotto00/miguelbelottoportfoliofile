@@ -35,7 +35,9 @@ class _SocialMediaTextState extends State<SocialMediaText> {
                 color: _isHovering
                     ? Commons.colorWhiteBase
                     : Commons.colorTextSecondary,
-                fontSize: screenSize.width * 0.010)),
+                fontSize: screenSize.width < 600
+                    ? screenSize.width * 0.03
+                    : screenSize.width * 0.010)),
       ),
     );
   }

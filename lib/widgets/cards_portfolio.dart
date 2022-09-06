@@ -62,7 +62,7 @@ class _CardsPortfolioState extends State<CardsPortfolio> {
                   const Padding(padding: EdgeInsets.all(8.0)),
                   Container(
                     width: screenSize.width * 0.12,
-                    height: screenSize.width * 0.11,
+                    height: screenSize.height * 0.25,
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(10.0),
                         image: DecorationImage(
