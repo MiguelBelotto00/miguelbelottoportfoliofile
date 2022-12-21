@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:miguelbelotto00/commons/commons.dart';
-import 'package:miguelbelotto00/screens/about_me_page.dart';
-import 'package:miguelbelotto00/widgets/cards_portfolio.dart';
 import 'dart:html' as html;
 
 import '../widgets/social_media_text.dart';
@@ -23,14 +20,14 @@ class _PhoneRenderState extends State<PhoneRender> {
       body: Container(
         height: screenSize.height,
         width: screenSize.width,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,
           colors: [Commons.colorBackgroundHigligth, Commons.colorBlackBase],
         )),
         child: ListView(children: [
-          HeaderApp(screenSize),
+          headerApp(screenSize),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Center(
@@ -41,17 +38,17 @@ class _PhoneRenderState extends State<PhoneRender> {
                       fontWeight: FontWeight.bold)),
             ),
           ),
-          CardsPortfolioPhone(screenSize),
-          AboutMePagePhone(screenSize)
+          cardsPortfolioPhone(screenSize),
+          aboutMePagePhone(screenSize)
         ]),
       ),
     );
   }
 }
 
-Widget HeaderApp(Size screenSize) {
+Widget headerApp(Size screenSize) {
   return Container(
-    padding: EdgeInsets.only(top: 20.0),
+    padding: const EdgeInsets.only(top: 20.0),
     color: Commons.colorBlackHiglight,
     height: screenSize.height * 0.6,
     width: screenSize.width,
@@ -118,17 +115,17 @@ Widget HeaderApp(Size screenSize) {
   );
 }
 
-Widget CardsPortfolioPhone(Size screenSize) {
+Widget cardsPortfolioPhone(Size screenSize) {
   return Container(
-    margin: EdgeInsets.all(25.0),
+    margin: const EdgeInsets.all(25.0),
     width: screenSize.width,
     height: screenSize.height * 0.4,
-    padding: EdgeInsets.all(10.0),
+    padding: const EdgeInsets.all(10.0),
     child: ListView(
       scrollDirection: Axis.horizontal,
       children: [
         Padding(padding: EdgeInsets.only(left: screenSize.width * 0.06)),
-        CardPortfolioPrimitivePhone(
+        cardPortfolioPrimitivePhone(
           screenSize,
           "Tiktokemon",
           "Desarrollado en flutter",
@@ -136,7 +133,7 @@ Widget CardsPortfolioPhone(Size screenSize) {
           "https://github.com/MiguelBelotto00/Tiktokemon",
         ),
         Padding(padding: EdgeInsets.only(left: screenSize.width * 0.03)),
-        CardPortfolioPrimitivePhone(
+        cardPortfolioPrimitivePhone(
           screenSize,
           "Bot de Twitter",
           "Desarrollado en Python",
@@ -144,7 +141,7 @@ Widget CardsPortfolioPhone(Size screenSize) {
           "https://github.com/MiguelBelotto00/Fitbot01",
         ),
         Padding(padding: EdgeInsets.only(left: screenSize.width * 0.03)),
-        CardPortfolioPrimitivePhone(
+        cardPortfolioPrimitivePhone(
           screenSize,
           "Clon de Twitter",
           "Desarrollado en flutter",
@@ -157,7 +154,7 @@ Widget CardsPortfolioPhone(Size screenSize) {
   );
 }
 
-Widget CardPortfolioPrimitivePhone(Size screenSize, String titleCard,
+Widget cardPortfolioPrimitivePhone(Size screenSize, String titleCard,
     String lenguageDev, String imagePath, String urlProject) {
   return InkWell(
     onHover: (value) {},
@@ -212,7 +209,7 @@ Widget CardPortfolioPrimitivePhone(Size screenSize, String titleCard,
   );
 }
 
-Widget AboutMePagePhone(Size screenSize) {
+Widget aboutMePagePhone(Size screenSize) {
   return SafeArea(
       child: Center(
     child: Container(
@@ -280,15 +277,15 @@ Widget AboutMePagePhone(Size screenSize) {
           Expanded(child: Container()),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SocialMediaText(
+            children: const [
+              SocialMediaText(
                   socialMediaName: "Twitter",
                   urlSocialMedia: "https://twitter.com/MiguelBelotto00"),
-              const SocialMediaText(
+              SocialMediaText(
                   socialMediaName: "Linkedin",
                   urlSocialMedia:
                       "https://www.linkedin.com/in/miguel-belotto/"),
-              const SocialMediaText(
+              SocialMediaText(
                   socialMediaName: "Github",
                   urlSocialMedia: "https://github.com/MiguelBelotto00"),
             ],
