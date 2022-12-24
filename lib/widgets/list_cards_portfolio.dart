@@ -22,29 +22,32 @@ class _ListCardsPortfolioState extends State<ListCardsPortfolio> {
           Padding(
               padding: EdgeInsets.only(
                   left: MediaQuery.of(context).size.width * 0.06)),
-          const CardsPortfolio(
+          CardsPortfolio(
             titleCard: "Tiktokemon",
             lenguageDev: "Desarrollado en flutter",
             imagePath: "assets/img/tiktokemon.png",
-            urlProject: "https://github.com/MiguelBelotto00/Tiktokemon",
+            urlProject:
+                Uri.parse("https://github.com/MiguelBelotto00/Tiktokemon"),
           ),
           Padding(
               padding: EdgeInsets.only(
                   left: MediaQuery.of(context).size.width * 0.03)),
-          const CardsPortfolio(
+          CardsPortfolio(
             titleCard: "Bot de Twitter",
             lenguageDev: "Desarrollado en Python",
             imagePath: "assets/img/bot_fit.png",
-            urlProject: "https://github.com/MiguelBelotto00/Fitbot01",
+            urlProject:
+                Uri.parse("https://github.com/MiguelBelotto00/Fitbot01"),
           ),
           Padding(
               padding: EdgeInsets.only(
                   left: MediaQuery.of(context).size.width * 0.03)),
-          const CardsPortfolio(
+          CardsPortfolio(
             titleCard: "Clon de Twitter",
             lenguageDev: "Desarrollado en flutter",
             imagePath: "assets/img/twitterclone.png",
-            urlProject: "https://github.com/MiguelBelotto00/TwitterCloneMobile",
+            urlProject: Uri.parse(
+                "https://github.com/MiguelBelotto00/TwitterCloneMobile"),
           ),
           Padding(
               padding: EdgeInsets.only(

@@ -70,15 +70,18 @@ class SideBarMenu extends StatelessWidget {
                 style: GoogleFonts.sourceSansPro(
                     color: Commons.colorWhiteBase,
                     fontSize: screenSize.width * 0.015)),
-            const SocialMediaText(
+            SocialMediaText(
                 socialMediaName: "Twitter",
-                urlSocialMedia: "https://twitter.com/MiguelBelotto00"),
-            const SocialMediaText(
+                urlSocialMedia:
+                    Uri.parse("https://twitter.com/MiguelBelotto00")),
+            SocialMediaText(
                 socialMediaName: "Linkedin",
-                urlSocialMedia: "https://www.linkedin.com/in/miguel-belotto/"),
-            const SocialMediaText(
+                urlSocialMedia:
+                    Uri.parse("https://www.linkedin.com/in/miguel-belotto/")),
+            SocialMediaText(
                 socialMediaName: "Github",
-                urlSocialMedia: "https://github.com/MiguelBelotto00"),
+                urlSocialMedia:
+                    Uri.parse("https://github.com/MiguelBelotto00")),
           ],
         ),
       ),
