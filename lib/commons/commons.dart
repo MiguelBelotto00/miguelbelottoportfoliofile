@@ -15,3 +15,25 @@ class Commons {
   static const Color colorSpotifyGreen = Color(0xFF1ed760);
   static const Color colorSpotifyBlue = Color(0xFF0d72ea);
 }
+
+var listOfProjects = [
+  {
+    "titleCard": "Tiktokemon",
+    "lenguageDev": "Desarrollado en flutter",
+    "imagePath": "assets/img/tiktokemon.png",
+    "urlProject": Uri.parse("https://github.com/MiguelBelotto00/Tiktokemon"),
+  },
+  {
+    "titleCard": "Bot de Twitter",
+    "lenguageDev": "Desarrollado en Python",
+    "imagePath": "assets/img/bot_fit.png",
+    "urlProject": Uri.parse("https://github.com/MiguelBelotto00/Fitbot01"),
+  },
+  {
+    "titleCard": "Clon de Twitter",
+    "lenguageDev": "Desarrollado en flutter",
+    "imagePath": "assets/img/twitterclone.png",
+    "urlProject":
+        Uri.parse("https://github.com/MiguelBelotto00/TwitterCloneMobile"),
+  },
+];
