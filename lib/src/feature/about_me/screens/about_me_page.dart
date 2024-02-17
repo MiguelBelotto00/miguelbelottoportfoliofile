@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:miguelbelotto00/commons/commons.dart';
+import 'package:miguelbelotto00/src/commons/commons.dart';
 
 class AboutMePage extends StatefulWidget {
-  const AboutMePage({Key? key}) : super(key: key);
+  const AboutMePage({super.key});
 
   @override
   State<AboutMePage> createState() => _AboutMePageState();
@@ -37,7 +37,7 @@ class _AboutMePageState extends State<AboutMePage> {
           children: [
             Text(
               "Supongo que quieres saber un poco más sobre mi.",
-              style: GoogleFonts.sourceSansPro(
+              style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
                   fontSize: screenSize.width * 0.025,
                   fontWeight: FontWeight.bold),
@@ -45,35 +45,35 @@ class _AboutMePageState extends State<AboutMePage> {
             ),
             Text(
               "Actualmente me encuentro en Asunción, Paraguay.",
-              style: GoogleFonts.sourceSansPro(
+              style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
                   fontSize: screenSize.width * 0.015),
               textAlign: TextAlign.center,
             ),
             Text(
               "Soy estudiante de Ingenieria en Informatica planeo terminar la carrera para el 2024.",
-              style: GoogleFonts.sourceSansPro(
+              style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
                   fontSize: screenSize.width * 0.015),
               textAlign: TextAlign.left,
             ),
             Text(
               "Soy desarrollador Dart-Flutter, el cual considero mi lenguaje principal,",
-              style: GoogleFonts.sourceSansPro(
+              style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
                   fontSize: screenSize.width * 0.015),
               textAlign: TextAlign.left,
             ),
             Text(
               "además utilizo Java/Kotlin y base de datos SQL y NoSQL",
-              style: GoogleFonts.sourceSansPro(
+              style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
                   fontSize: screenSize.width * 0.015),
               textAlign: TextAlign.left,
             ),
             Text(
               "Por supuesto todos necesitamos controlar versiones asi que ese trabajo lo hago con Git",
-              style: GoogleFonts.sourceSansPro(
+              style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
                   fontSize: screenSize.width * 0.015),
               textAlign: TextAlign.left,

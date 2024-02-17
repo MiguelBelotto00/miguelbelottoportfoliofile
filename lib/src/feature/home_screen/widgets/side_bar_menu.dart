@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:miguelbelotto00/commons/commons.dart';
-import 'package:miguelbelotto00/providers/widgets_manage_basics.dart';
-import 'package:miguelbelotto00/screens/about_me_page.dart';
-import 'package:miguelbelotto00/widgets/icons_row.dart';
-import 'package:miguelbelotto00/screens/init_page.dart';
-import 'package:miguelbelotto00/widgets/social_media_text.dart';
+import 'package:miguelbelotto00/src/commons/commons.dart';
+import 'package:miguelbelotto00/src/feature/home_screen/providers/widgets_manage_basics.dart';
+import 'package:miguelbelotto00/src/feature/about_me/screens/about_me_page.dart';
+import 'package:miguelbelotto00/src/feature/home_screen/widgets/icons_row.dart';
+import 'package:miguelbelotto00/src/feature/portfolio_page/screens/init_page.dart';
+import 'package:miguelbelotto00/src/feature/home_screen/widgets/social_media_text.dart';
 import 'package:provider/provider.dart';
 
 class SideBarMenu extends StatelessWidget {
   final Size screenSize;
-  const SideBarMenu({Key? key, required this.screenSize}) : super(key: key);
+  const SideBarMenu({super.key, required this.screenSize});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class SideBarMenu extends StatelessWidget {
                 ),
                 Text(
                   "Miguel Belotto",
-                  style: GoogleFonts.sourceSansPro(
+                  style: GoogleFonts.sourceSans3(
                       textStyle: TextStyle(
                           color: Commons.colorWhiteBase,
                           fontSize: screenSize.width * 0.02,
@@ -67,7 +67,7 @@ class SideBarMenu extends StatelessWidget {
               color: Commons.colorTextSecondary,
             ),
             Text("Redes Sociales",
-                style: GoogleFonts.sourceSansPro(
+                style: GoogleFonts.sourceSans3(
                     color: Commons.colorWhiteBase,
                     fontSize: screenSize.width * 0.015)),
             SocialMediaText(

@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:miguelbelotto00/commons/commons.dart';
-import 'package:miguelbelotto00/widgets/cards_portfolio.dart';
+import 'package:miguelbelotto00/src/feature/portfolio_page/models/list_of_projects.dart';
+import 'package:miguelbelotto00/src/commons/commons.dart';
+import 'package:miguelbelotto00/src/feature/portfolio_page/widgets/cards_portfolio.dart';
 
 class ListCardsPortfolio extends StatefulWidget {
-  const ListCardsPortfolio({Key? key}) : super(key: key);
+  const ListCardsPortfolio({super.key, required this.listOfProjects3});
+
+  final List<ListOfProjects> listOfProjects3;
 
   @override
   State<ListCardsPortfolio> createState() => _ListCardsPortfolioState();
@@ -20,19 +23,19 @@ class _ListCardsPortfolioState extends State<ListCardsPortfolio> {
           Expanded(
               child: ListView.builder(
                   controller: ScrollController(),
-                  scrollDirection: Axis.vertical,
-                  itemCount: listOfProjects.length,
+                  scrollDirection: Axis.horizontal,
+                  itemCount: 3,
                   itemBuilder: (context, index) {
                     return Padding(
                         padding: EdgeInsets.only(
                             left: MediaQuery.of(context).size.width * 0.06),
                         child: CardsPortfolio(
                           index: index,
-                          titleCard: "Tiktokemon",
-                          lenguageDev: "Desarrollado en flutter",
-                          imagePath: "assets/img/tiktokemon.png",
+                          titleCard: listOfProjecst[index].titleCard,
+                          lenguageDev: listOfProjecst[index].lenguageDev,
+                          imagePath: listOfProjecst[index].subtitle,
                           urlProject: Uri.parse(
-                              "https://github.com/MiguelBelotto00/Tiktokemon"),
+                              listOfProjecst[index].urlproject),
                         ));
                   }))
         ]));

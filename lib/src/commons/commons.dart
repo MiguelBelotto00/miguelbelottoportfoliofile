@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import 'package:miguelbelotto00/src/feature/portfolio_page/models/list_of_projects.dart';
 
 class Commons {
   static const Color colorBlackBase = Color(0xFF121212);
@@ -16,24 +17,26 @@ class Commons {
   static const Color colorSpotifyBlue = Color(0xFF0d72ea);
 }
 
-var listOfProjects = [
+const listOfProjects2 = '''[
   {
     "titleCard": "Tiktokemon",
     "lenguageDev": "Desarrollado en flutter",
-    "imagePath": "assets/img/tiktokemon.png",
-    "urlProject": Uri.parse("https://github.com/MiguelBelotto00/Tiktokemon"),
+    "subtitle": "assets/img/tiktokemon.png",
+    "urlProject": "https://github.com/MiguelBelotto00/Tiktokemon"
   },
   {
     "titleCard": "Bot de Twitter",
     "lenguageDev": "Desarrollado en Python",
-    "imagePath": "assets/img/bot_fit.png",
-    "urlProject": Uri.parse("https://github.com/MiguelBelotto00/Fitbot01"),
+    "subtitle": "assets/img/bot_fit.png",
+    "urlProject": "https://github.com/MiguelBelotto00/Fitbot01"
   },
   {
     "titleCard": "Clon de Twitter",
     "lenguageDev": "Desarrollado en flutter",
-    "imagePath": "assets/img/twitterclone.png",
-    "urlProject":
-        Uri.parse("https://github.com/MiguelBelotto00/TwitterCloneMobile"),
-  },
-];
+    "subtitle": "assets/img/twitterclone.png",
+    "urlProject": "https://github.com/MiguelBelotto00/TwitterCloneMobile"
+  }
+]''';
+
+
+final listOfProjecst =  listOfProjectsFromJson(listOfProjects2);

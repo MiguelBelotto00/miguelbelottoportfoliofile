@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:miguelbelotto00/providers/widgets_manage_basics.dart';
+import 'package:miguelbelotto00/src/feature/home_screen/providers/widgets_manage_basics.dart';
 import 'package:provider/provider.dart';
-import 'package:miguelbelotto00/screens/home.dart';
+import 'package:miguelbelotto00/src/feature/home_screen/screens/home.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(

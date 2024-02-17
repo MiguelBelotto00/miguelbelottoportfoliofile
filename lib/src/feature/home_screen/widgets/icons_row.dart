@@ -6,11 +6,10 @@ class IconsRow extends StatefulWidget {
   final String textReceive;
   final VoidCallback functionReceive;
   const IconsRow(
-      {Key? key,
+      {super.key,
       required this.iconReceive,
       required this.textReceive,
-      required this.functionReceive})
-      : super(key: key);
+      required this.functionReceive});
 
   @override
   State<IconsRow> createState() => _IconsRowState();
@@ -40,7 +39,7 @@ class _IconsRowState extends State<IconsRow> {
             padding: const EdgeInsets.all(8.0),
             child: Text(
               widget.textReceive,
-              style: GoogleFonts.sourceSansPro(
+              style: GoogleFonts.sourceSans3(
                   color: _isHovering ? Colors.white : Colors.grey,
                   fontSize: screenSize.width * 0.015),
             ),

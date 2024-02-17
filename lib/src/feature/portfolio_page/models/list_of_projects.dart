@@ -24,13 +24,13 @@ class ListOfProjects {
         titleCard: json["titleCard"],
         lenguageDev: json["lenguageDev"],
         subtitle: json["subtitle"],
-        urlproject: json["urlproject"],
+        urlproject: json["urlProject"],
       );
 
   Map<String, dynamic> toJson() => {
         "titleCard": titleCard,
         "lenguageDev": lenguageDev,
         "subtitle": subtitle,
-        "urlproject": urlproject,
+        "urlProject": urlproject,
       };
 }

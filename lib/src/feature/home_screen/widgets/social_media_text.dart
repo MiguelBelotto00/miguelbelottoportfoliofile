@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:miguelbelotto00/commons/commons.dart';
+import 'package:miguelbelotto00/src/commons/commons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialMediaText extends StatefulWidget {
   final Uri urlSocialMedia;
   final String socialMediaName;
   const SocialMediaText(
-      {Key? key, required this.socialMediaName, required this.urlSocialMedia})
-      : super(key: key);
+      {super.key, required this.socialMediaName, required this.urlSocialMedia});
 
   @override
   State<SocialMediaText> createState() => _SocialMediaTextState();
@@ -36,7 +35,7 @@ class _SocialMediaTextState extends State<SocialMediaText> {
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Text(widget.socialMediaName,
-            style: GoogleFonts.sourceSansPro(
+            style: GoogleFonts.sourceSans3(
                 color: _isHovering
                     ? Commons.colorWhiteBase
                     : Commons.colorTextSecondary,

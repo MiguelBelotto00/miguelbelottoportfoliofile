@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:miguelbelotto00/commons/commons.dart';
+import 'package:miguelbelotto00/src/commons/commons.dart';
 
 class HeaderSpoti extends StatefulWidget {
-  const HeaderSpoti({Key? key}) : super(key: key);
+  const HeaderSpoti({super.key});
 
   @override
   State<HeaderSpoti> createState() => _HeaderSpotiState();
@@ -55,27 +55,27 @@ class _HeaderSpotiState extends State<HeaderSpoti> {
               children: [
                 Text(
                   "Hola, soy",
-                  style: GoogleFonts.sourceSansPro(
+                  style: GoogleFonts.sourceSans3(
                       color: Commons.colorWhiteBase,
                       fontSize: screenSize.width * 0.012),
                 ),
                 Text(
                   "Miguel Belotto",
-                  style: GoogleFonts.sourceSansPro(
+                  style: GoogleFonts.sourceSans3(
                       color: Commons.colorWhiteBase,
                       fontSize: screenSize.width * 0.03,
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
                   "Desarrollador Dart - Flutter",
-                  style: GoogleFonts.sourceSansPro(
+                  style: GoogleFonts.sourceSans3(
                       color: Commons.colorTextSecondary,
                       fontSize: screenSize.width * 0.02,
                       fontWeight: FontWeight.w500),
                 ),
                 Text(
                   "Además de Flutter también utilizo: SQL,NoSQL,Git,Java y Kotlin.",
-                  style: GoogleFonts.sourceSansPro(
+                  style: GoogleFonts.sourceSans3(
                       color: Commons.colorTextSecondary,
                       fontSize: screenSize.width * 0.01,
                       fontWeight: FontWeight.w500),

@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:miguelbelotto00/providers/widgets_manage_basics.dart';
-import 'package:miguelbelotto00/widgets/page_tracking_manage.dart';
+import 'package:miguelbelotto00/src/feature/home_screen/providers/widgets_manage_basics.dart';
+import 'package:miguelbelotto00/src/feature/home_screen/widgets/page_tracking_manage.dart';
 import 'package:provider/provider.dart';
-import 'package:miguelbelotto00/widgets/side_bar_menu.dart';
+import 'package:miguelbelotto00/src/feature/home_screen/widgets/side_bar_menu.dart';
 
 class Home extends StatefulWidget {
-  const Home({Key? key}) : super(key: key);
+  const Home({super.key});
 
   @override
   State<Home> createState() => _Home();
