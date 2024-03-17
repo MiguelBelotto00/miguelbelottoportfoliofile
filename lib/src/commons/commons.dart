@@ -1,4 +1,4 @@
-import "package:flutter/material.dart";
+import 'package:flutter/material.dart';
 import 'package:miguelbelotto00/src/feature/portfolio_page/models/list_of_projects.dart';
 
 class Commons {
@@ -17,7 +17,8 @@ class Commons {
   static const Color colorSpotifyBlue = Color(0xFF0d72ea);
 }
 
-const listOfProjects2 = '''[
+const listOfProjects2 = '''
+[
   {
     "titleCard": "Tiktokemon",
     "lenguageDev": "Desarrollado en flutter",
@@ -38,5 +39,4 @@ const listOfProjects2 = '''[
   }
 ]''';
 
-
-final listOfProjecst =  listOfProjectsFromJson(listOfProjects2);
+final listOfProjecst = projectsFromJson(listOfProjects2);

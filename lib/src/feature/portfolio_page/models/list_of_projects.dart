@@ -1,36 +1,40 @@
 import 'dart:convert';
 
-List<ListOfProjects> listOfProjectsFromJson(String str) =>
-    List<ListOfProjects>.from(
-        json.decode(str).map((x) => ListOfProjects.fromJson(x)));
+List<ProjectModel> projectsFromJson(String str) => List<ProjectModel>.from(
+      (jsonDecode(str) as List).map(
+        (project) => ProjectModel.fromJson(
+          project as Map<String, dynamic>,
+        ),
+      ),
+    );
 
-String listOfProjectsToJson(List<ListOfProjects> data) =>
+String projectsToJson(List<ProjectModel> data) =>
     json.encode(List<dynamic>.from(data.map((x) => x.toJson())));
 
-class ListOfProjects {
-  ListOfProjects({
+class ProjectModel {
+  ProjectModel({
     required this.titleCard,
     required this.lenguageDev,
     required this.subtitle,
     required this.urlproject,
   });
 
+  factory ProjectModel.fromJson(Map<String, dynamic> json) => ProjectModel(
+        titleCard: json['titleCard'] as String,
+        lenguageDev: json['lenguageDev'] as String,
+        subtitle: json['subtitle'] as String,
+        urlproject: json['urlProject'] as String,
+      );
+
   final String titleCard;
   final String lenguageDev;
   final String subtitle;
   final String urlproject;
 
-  factory ListOfProjects.fromJson(Map<String, dynamic> json) => ListOfProjects(
-        titleCard: json["titleCard"],
-        lenguageDev: json["lenguageDev"],
-        subtitle: json["subtitle"],
-        urlproject: json["urlProject"],
-      );
-
   Map<String, dynamic> toJson() => {
-        "titleCard": titleCard,
-        "lenguageDev": lenguageDev,
-        "subtitle": subtitle,
-        "urlProject": urlproject,
+        'titleCard': titleCard,
+        'lenguageDev': lenguageDev,
+        'subtitle': subtitle,
+        'urlProject': urlproject,
       };
 }

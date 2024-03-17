@@ -15,20 +15,21 @@ class _HeaderSpotiState extends State<HeaderSpoti> {
     final screenSize = MediaQuery.of(context).size;
     return Container(
       decoration: const BoxDecoration(
-          gradient: LinearGradient(
-              begin: Alignment.topCenter,
-              end: Alignment.bottomCenter,
-              colors: [
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
             Color.fromARGB(122, 206, 33, 33),
-            Commons.colorBackgroundHigligth
-          ])),
+            Commons.colorBackgroundHigligth,
+          ],
+        ),
+      ),
       height: screenSize.height * 0.45,
       width: screenSize.width,
       alignment: Alignment.center,
       child: Padding(
         padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.05),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             Container(
               width: screenSize.height * 0.35,
@@ -36,14 +37,16 @@ class _HeaderSpotiState extends State<HeaderSpoti> {
               decoration: const BoxDecoration(
                 boxShadow: [
                   BoxShadow(
-                      color: Colors.black38,
-                      spreadRadius: 5,
-                      blurRadius: 15,
-                      offset: Offset(0.0, 3.0))
+                    color: Colors.black38,
+                    spreadRadius: 5,
+                    blurRadius: 15,
+                    offset: Offset(0, 3),
+                  ),
                 ],
                 image: DecorationImage(
-                    fit: BoxFit.cover,
-                    image: AssetImage("assets/img/panda.jpg")),
+                  fit: BoxFit.cover,
+                  image: AssetImage('assets/img/panda.jpg'),
+                ),
               ),
             ),
             SizedBox(
@@ -54,34 +57,38 @@ class _HeaderSpotiState extends State<HeaderSpoti> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Hola, soy",
+                  'Hola, soy',
                   style: GoogleFonts.sourceSans3(
-                      color: Commons.colorWhiteBase,
-                      fontSize: screenSize.width * 0.012),
+                    color: Commons.colorWhiteBase,
+                    fontSize: screenSize.width * 0.012,
+                  ),
                 ),
                 Text(
-                  "Miguel Belotto",
+                  'Miguel Belotto',
                   style: GoogleFonts.sourceSans3(
-                      color: Commons.colorWhiteBase,
-                      fontSize: screenSize.width * 0.03,
-                      fontWeight: FontWeight.bold),
+                    color: Commons.colorWhiteBase,
+                    fontSize: screenSize.width * 0.03,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
                 Text(
-                  "Desarrollador Dart - Flutter",
+                  'Desarrollador Dart - Flutter',
                   style: GoogleFonts.sourceSans3(
-                      color: Commons.colorTextSecondary,
-                      fontSize: screenSize.width * 0.02,
-                      fontWeight: FontWeight.w500),
+                    color: Commons.colorTextSecondary,
+                    fontSize: screenSize.width * 0.02,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
                 Text(
-                  "Además de Flutter también utilizo: SQL,NoSQL,Git,Java y Kotlin.",
+                  '''Además de Flutter también utilizo: SQL,NoSQL,Git,Java y Kotlin.''',
                   style: GoogleFonts.sourceSans3(
-                      color: Commons.colorTextSecondary,
-                      fontSize: screenSize.width * 0.01,
-                      fontWeight: FontWeight.w500),
+                    color: Commons.colorTextSecondary,
+                    fontSize: screenSize.width * 0.01,
+                    fontWeight: FontWeight.w500,
+                  ),
                 ),
               ],
-            )
+            ),
           ],
         ),
       ),

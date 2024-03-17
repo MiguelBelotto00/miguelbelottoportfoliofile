@@ -16,32 +16,41 @@ class InitPage extends StatefulWidget {
 class _InitState extends State<InitPage> {
   @override
   Widget build(BuildContext context) {
-    final Size screenSize = MediaQuery.of(context).size;
+    final screenSize = MediaQuery.of(context).size;
     return SafeArea(
-        child: Container(
-      width: screenSize.width * 0.82,
-      height: screenSize.height,
-      decoration: const BoxDecoration(
+      child: Container(
+        height: screenSize.height,
+        width: screenSize.width * 0.82,
+        decoration: const BoxDecoration(
           gradient: LinearGradient(
-        begin: Alignment.topCenter,
-        end: Alignment.bottomCenter,
-        colors: [Commons.colorBackgroundHigligth, Commons.colorBlackBase],
-      )),
-      child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Commons.colorBackgroundHigligth, Commons.colorBlackBase],
+          ),
+        ),
+        child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const HeaderSpoti(),
             Padding(
-              padding: const EdgeInsets.only(top: 8.0, left: 25.0),
-              child: Text("Mis Proyectos",
-                  style: GoogleFonts.sourceSans3(
-                      fontSize: screenSize.width * 0.015,
-                      color: Commons.colorWhiteBase,
-                      fontWeight: FontWeight.bold)),
+              padding: const EdgeInsets.only(top: 8, left: 25),
+              child: Text(
+                'Mis Proyectos',
+                style: GoogleFonts.sourceSans3(
+                  fontSize: screenSize.width * 0.015,
+                  color: Commons.colorWhiteBase,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
             ),
-            ListCardsPortfolio(listOfProjects3: listOfProjecst,),
-          ]),
-    ));
+            Expanded(
+              child: ListCardsPortfolio(
+                projects: listOfProjecst,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }

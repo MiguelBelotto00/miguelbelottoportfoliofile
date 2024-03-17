@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:miguelbelotto00/src/feature/home_screen/providers/widgets_manage_basics.dart';
-import 'package:provider/provider.dart';
 import 'package:miguelbelotto00/src/feature/home_screen/screens/home.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   runApp(const MyApp());

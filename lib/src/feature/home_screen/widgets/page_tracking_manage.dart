@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 class PageTrackingManage extends StatefulWidget {
+  const PageTrackingManage({required this.widgetChildReceived, super.key});
   final Widget widgetChildReceived;
-  const PageTrackingManage({super.key, required this.widgetChildReceived});
 
   @override
   State<PageTrackingManage> createState() => _PageTrackingManageState();
