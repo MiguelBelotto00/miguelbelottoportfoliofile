@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:miguelbelotto00/extensions/utils.dart';
 import 'package:miguelbelotto00/src/commons/commons.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -27,7 +28,6 @@ class _SocialMediaTextState extends State<SocialMediaText> {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
     return InkWell(
       onHover: (value) {
         setState(() {
@@ -43,9 +43,9 @@ class _SocialMediaTextState extends State<SocialMediaText> {
             color: _isHovering
                 ? Commons.colorWhiteBase
                 : Commons.colorTextSecondary,
-            fontSize: screenSize.width < 600
-                ? screenSize.width * 0.03
-                : screenSize.width * 0.010,
+            fontSize: context.width < 600
+                ? context.width * 0.03
+                : context.width * 0.010,
           ),
         ),
       ),

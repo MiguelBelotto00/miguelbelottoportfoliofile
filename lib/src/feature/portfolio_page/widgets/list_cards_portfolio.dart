@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miguelbelotto00/extensions/utils.dart';
 import 'package:miguelbelotto00/src/feature/portfolio_page/models/list_of_projects.dart';
 import 'package:miguelbelotto00/src/feature/portfolio_page/widgets/cards_portfolio.dart';
 
@@ -18,8 +19,8 @@ class _ListCardsPortfolioState extends State<ListCardsPortfolio> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.47,
-      width: MediaQuery.of(context).size.width,
+      height: context.height * 0.47,
+      width: context.width,
       child: GridView.builder(
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 1,

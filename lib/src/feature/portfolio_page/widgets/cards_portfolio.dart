@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:miguelbelotto00/extensions/utils.dart';
 import 'package:miguelbelotto00/src/commons/commons.dart';
 import 'package:miguelbelotto00/src/feature/portfolio_page/models/list_of_projects.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -27,7 +28,6 @@ class _CardsPortfolioState extends State<CardsPortfolio> {
 
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
     return InkWell(
       onHover: (value) {
         setState(() {
@@ -66,7 +66,7 @@ class _CardsPortfolioState extends State<CardsPortfolio> {
             Text(
               widget.project.titleCard,
               style: GoogleFonts.sourceSans3(
-                fontSize: screenSize.width * 0.015,
+                fontSize: context.width * 0.015,
                 color: Commons.colorWhiteBase,
                 fontWeight: FontWeight.w700,
               ),
@@ -75,7 +75,7 @@ class _CardsPortfolioState extends State<CardsPortfolio> {
             Text(
               widget.project.lenguageDev,
               style: GoogleFonts.sourceSans3(
-                fontSize: screenSize.width * 0.01,
+                fontSize: context.width * 0.01,
                 color: Commons.colorTextSecondary,
                 fontWeight: FontWeight.w500,
               ),

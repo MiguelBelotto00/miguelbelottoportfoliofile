@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:miguelbelotto00/extensions/utils.dart';
 
 class PortfolioPage extends StatefulWidget {
   const PortfolioPage({super.key});
@@ -10,10 +11,9 @@ class PortfolioPage extends StatefulWidget {
 class _PortfolioPageState extends State<PortfolioPage> {
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
     return Container(
-      width: screenSize.width * 0.82,
-      height: screenSize.height,
+      width: context.width * 0.82,
+      height: context.height,
       color: Colors.pink,
       child: Container(
         alignment: Alignment.center,
