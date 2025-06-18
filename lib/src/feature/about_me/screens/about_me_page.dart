@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:miguelbelotto00/extensions/utils.dart';
 import 'package:miguelbelotto00/src/commons/commons.dart';
 
 class AboutMePage extends StatefulWidget {
@@ -12,12 +13,11 @@ class AboutMePage extends StatefulWidget {
 class _AboutMePageState extends State<AboutMePage> {
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
     return SafeArea(
       child: Center(
         child: Container(
-          width: screenSize.width * 0.82,
-          height: screenSize.height,
+          width: context.width * 0.82,
+          height: context.height,
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               begin: Alignment.topCenter,
@@ -30,8 +30,8 @@ class _AboutMePageState extends State<AboutMePage> {
             ),
           ),
           padding: EdgeInsets.symmetric(
-            horizontal: screenSize.width * 0.05,
-            vertical: screenSize.height * 0.1,
+            horizontal: context.width * 0.05,
+            vertical: context.height * 0.1,
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -40,7 +40,7 @@ class _AboutMePageState extends State<AboutMePage> {
                 'Supongo que quieres saber un poco más sobre mi.',
                 style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
-                  fontSize: screenSize.width * 0.025,
+                  fontSize: context.width * 0.025,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.left,
@@ -49,7 +49,7 @@ class _AboutMePageState extends State<AboutMePage> {
                 'Actualmente me encuentro en Asunción, Paraguay.',
                 style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
-                  fontSize: screenSize.width * 0.015,
+                  fontSize: context.width * 0.015,
                 ),
                 textAlign: TextAlign.center,
               ),
@@ -57,7 +57,7 @@ class _AboutMePageState extends State<AboutMePage> {
                 '''Soy estudiante de Ingenieria en Informatica planeo terminar la carrera para el 2024.''',
                 style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
-                  fontSize: screenSize.width * 0.015,
+                  fontSize: context.width * 0.015,
                 ),
                 textAlign: TextAlign.left,
               ),
@@ -65,7 +65,7 @@ class _AboutMePageState extends State<AboutMePage> {
                 '''Soy desarrollador Dart-Flutter, el cual considero mi lenguaje principal,''',
                 style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
-                  fontSize: screenSize.width * 0.015,
+                  fontSize: context.width * 0.015,
                 ),
                 textAlign: TextAlign.left,
               ),
@@ -73,7 +73,7 @@ class _AboutMePageState extends State<AboutMePage> {
                 'además utilizo Java/Kotlin y base de datos SQL y NoSQL',
                 style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
-                  fontSize: screenSize.width * 0.015,
+                  fontSize: context.width * 0.015,
                 ),
                 textAlign: TextAlign.left,
               ),
@@ -81,7 +81,7 @@ class _AboutMePageState extends State<AboutMePage> {
                 '''Por supuesto todos necesitamos controlar versiones asi que ese trabajo lo hago con Git''',
                 style: GoogleFonts.sourceSans3(
                   color: Commons.colorWhiteBase,
-                  fontSize: screenSize.width * 0.015,
+                  fontSize: context.width * 0.015,
                 ),
                 textAlign: TextAlign.left,
               ),

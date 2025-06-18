@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:miguelbelotto00/extensions/utils.dart';
 import 'package:miguelbelotto00/src/commons/commons.dart';
 
 class HeaderSpoti extends StatefulWidget {
@@ -12,7 +13,6 @@ class HeaderSpoti extends StatefulWidget {
 class _HeaderSpotiState extends State<HeaderSpoti> {
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
     return Container(
       decoration: const BoxDecoration(
         gradient: LinearGradient(
@@ -24,16 +24,16 @@ class _HeaderSpotiState extends State<HeaderSpoti> {
           ],
         ),
       ),
-      height: screenSize.height * 0.45,
-      width: screenSize.width,
+      height: context.height * 0.45,
+      width: context.width,
       alignment: Alignment.center,
       child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: screenSize.width * 0.05),
+        padding: EdgeInsets.symmetric(horizontal: context.width * 0.05),
         child: Row(
           children: [
             Container(
-              width: screenSize.height * 0.35,
-              height: screenSize.height * 0.35,
+              width: context.height * 0.35,
+              height: context.height * 0.35,
               decoration: const BoxDecoration(
                 boxShadow: [
                   BoxShadow(
@@ -50,7 +50,7 @@ class _HeaderSpotiState extends State<HeaderSpoti> {
               ),
             ),
             SizedBox(
-              width: screenSize.width * 0.01,
+              width: context.width * 0.01,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -60,14 +60,14 @@ class _HeaderSpotiState extends State<HeaderSpoti> {
                   'Hola, soy',
                   style: GoogleFonts.sourceSans3(
                     color: Commons.colorWhiteBase,
-                    fontSize: screenSize.width * 0.012,
+                    fontSize: context.width * 0.012,
                   ),
                 ),
                 Text(
                   'Miguel Belotto',
                   style: GoogleFonts.sourceSans3(
                     color: Commons.colorWhiteBase,
-                    fontSize: screenSize.width * 0.03,
+                    fontSize: context.width * 0.03,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -75,7 +75,7 @@ class _HeaderSpotiState extends State<HeaderSpoti> {
                   'Desarrollador Dart - Flutter',
                   style: GoogleFonts.sourceSans3(
                     color: Commons.colorTextSecondary,
-                    fontSize: screenSize.width * 0.02,
+                    fontSize: context.width * 0.02,
                     fontWeight: FontWeight.w500,
                   ),
                 ),
@@ -83,7 +83,7 @@ class _HeaderSpotiState extends State<HeaderSpoti> {
                   '''Además de Flutter también utilizo: SQL,NoSQL,Git,Java y Kotlin.''',
                   style: GoogleFonts.sourceSans3(
                     color: Commons.colorTextSecondary,
-                    fontSize: screenSize.width * 0.01,
+                    fontSize: context.width * 0.01,
                     fontWeight: FontWeight.w500,
                   ),
                 ),

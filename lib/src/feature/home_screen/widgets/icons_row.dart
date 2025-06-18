@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:miguelbelotto00/extensions/utils.dart';
 
 class IconsRow extends StatefulWidget {
   const IconsRow({
@@ -20,7 +21,6 @@ class _IconsRowState extends State<IconsRow> {
   bool _isHovering = false;
   @override
   Widget build(BuildContext context) {
-    final screenSize = MediaQuery.of(context).size;
     return InkWell(
       onHover: (value) {
         setState(() {
@@ -41,7 +41,7 @@ class _IconsRowState extends State<IconsRow> {
               widget.textReceive,
               style: GoogleFonts.sourceSans3(
                 color: _isHovering ? Colors.white : Colors.grey,
-                fontSize: screenSize.width * 0.015,
+                fontSize: context.width * 0.015,
               ),
             ),
           ),
