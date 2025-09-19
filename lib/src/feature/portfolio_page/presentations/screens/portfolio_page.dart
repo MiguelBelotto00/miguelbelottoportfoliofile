@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:miguelbelotto00/extensions/utils.dart';
+import 'package:portfolio_miguel_belotto/extensions/utils.dart';
 
 class PortfolioPage extends StatefulWidget {
   const PortfolioPage({super.key});

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:miguelbelotto00/extensions/utils.dart';
-import 'package:miguelbelotto00/src/commons/commons.dart';
+import 'package:portfolio_miguel_belotto/core/styles/project_colors.dart';
+import 'package:portfolio_miguel_belotto/core/styles/styles.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialMediaText extends StatefulWidget {
@@ -39,13 +38,10 @@ class _SocialMediaTextState extends State<SocialMediaText> {
         padding: const EdgeInsets.all(12),
         child: Text(
           widget.socialMediaName,
-          style: GoogleFonts.sourceSans3(
+          style: Styles.textBoldStyle.copyWith(
             color: _isHovering
-                ? Commons.colorWhiteBase
-                : Commons.colorTextSecondary,
-            fontSize: context.width < 600
-                ? context.width * 0.03
-                : context.width * 0.010,
+                ? ProjectColors.colorWhiteBase
+                : ProjectColors.colorTextSecondary,
           ),
         ),
       ),

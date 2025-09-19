@@ -1,26 +1,33 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
-import 'package:miguelbelotto00/src/feature/home_screen/providers/widgets_manage_basics.dart';
-import 'package:miguelbelotto00/src/feature/home_screen/screens/home.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:portfolio_miguel_belotto/core/config/router.dart';
 
 void main() {
-  runApp(const MyApp());
+  runZonedGuarded(() {
+    WidgetsFlutterBinding.ensureInitialized();
+
+    runApp(const MyApp());
+  }, (error, stackTrace) {
+    debugPrint('Error: $error');
+    debugPrint('Stack Trace: $stackTrace');
+  });
 }
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-      create: (context) => WidgetsManageBasics(),
-      builder: (context, child) {
-        return MaterialApp(
-          title: 'Miguel Belotto Portfolios',
-          theme:
-              ThemeData(visualDensity: VisualDensity.adaptivePlatformDensity),
-          home: const Home(),
-        );
-      },
+    return ProviderScope(
+      child: MaterialApp.router(
+        theme: ThemeData(
+          visualDensity: VisualDensity.adaptivePlatformDensity,
+          useMaterial3: true,
+          fontFamily: 'Poppins',
+        ),
+        routerConfig: router,
+      ),
     );
   }
 }

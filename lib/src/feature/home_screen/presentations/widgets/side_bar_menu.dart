@@ -1,45 +1,43 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:miguelbelotto00/src/commons/commons.dart';
-import 'package:miguelbelotto00/src/feature/about_me/screens/about_me_page.dart';
-import 'package:miguelbelotto00/src/feature/home_screen/providers/widgets_manage_basics.dart';
-import 'package:miguelbelotto00/src/feature/home_screen/widgets/icons_row.dart';
-import 'package:miguelbelotto00/src/feature/home_screen/widgets/social_media_text.dart';
-import 'package:miguelbelotto00/src/feature/portfolio_page/screens/init_page.dart';
-import 'package:provider/provider.dart';
+import 'package:go_router/go_router.dart';
+import 'package:portfolio_miguel_belotto/core/styles/project_colors.dart';
+import 'package:portfolio_miguel_belotto/core/styles/styles.dart';
+import 'package:portfolio_miguel_belotto/src/feature/home_screen/presentations/widgets/icons_row.dart';
+import 'package:portfolio_miguel_belotto/src/feature/home_screen/presentations/widgets/social_media_text.dart';
 
 class SideBarMenu extends StatelessWidget {
-  const SideBarMenu({required this.screenSize, super.key});
+  const SideBarMenu({
+    required this.screenSize,
+    required this.navigationShell,
+    super.key,
+  });
   final Size screenSize;
+  final StatefulNavigationShell navigationShell;
 
   @override
   Widget build(BuildContext context) {
-    final widgetPass = Provider.of<WidgetsManageBasics>(context);
     return Container(
-      color: Colors.black,
+      decoration: const BoxDecoration(
+        color: Colors.black,
+        // borderRadius: BorderRadius.all(Radius.circular(25)),
+      ),
       height: screenSize.height,
-      width: screenSize.width * 0.18,
+      width: 300,
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 30),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
           children: [
             Row(
               children: [
-                Icon(
+                const Icon(
                   Icons.adb,
-                  color: Commons.colorWhiteBase,
-                  size: screenSize.width * 0.02,
+                  color: ProjectColors.colorWhiteBase,
                 ),
                 Text(
                   'Miguel Belotto',
-                  style: GoogleFonts.sourceSans3(
-                    textStyle: TextStyle(
-                      color: Commons.colorWhiteBase,
-                      fontSize: screenSize.width * 0.02,
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
+                  style: Styles.titleStyle,
                 ),
               ],
             ),
@@ -49,14 +47,12 @@ class SideBarMenu extends StatelessWidget {
             IconsRow(
               iconReceive: Icons.home_outlined,
               textReceive: 'Inicio',
-              functionReceive: () =>
-                  {widgetPass.widgetsManage = const InitPage()},
+              functionReceive: () => navigationShell.goBranch(0),
             ),
             IconsRow(
               iconReceive: Icons.switch_account_outlined,
               textReceive: 'Sobre mi',
-              functionReceive: () =>
-                  {widgetPass.widgetsManage = const AboutMePage()},
+              functionReceive: () => navigationShell.goBranch(1),
             ),
             /* IconsRow(
               iconReceive: Icons.auto_awesome_motion_outlined,
@@ -66,14 +62,11 @@ class SideBarMenu extends StatelessWidget {
             ),*/
             Divider(
               height: screenSize.height * 0.05,
-              color: Commons.colorTextSecondary,
+              color: ProjectColors.colorTextSecondary,
             ),
             Text(
               'Redes Sociales',
-              style: GoogleFonts.sourceSans3(
-                color: Commons.colorWhiteBase,
-                fontSize: screenSize.width * 0.015,
-              ),
+              style: Styles.subtitleBoldStyle,
             ),
             SocialMediaText(
               socialMediaName: 'Twitter',

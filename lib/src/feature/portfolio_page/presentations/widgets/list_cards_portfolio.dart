@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:miguelbelotto00/extensions/utils.dart';
-import 'package:miguelbelotto00/src/feature/portfolio_page/models/list_of_projects.dart';
-import 'package:miguelbelotto00/src/feature/portfolio_page/widgets/cards_portfolio.dart';
+import 'package:portfolio_miguel_belotto/extensions/utils.dart';
+import 'package:portfolio_miguel_belotto/src/feature/portfolio_page/data/models/list_of_projects.dart';
+import 'package:portfolio_miguel_belotto/src/feature/portfolio_page/presentations/widgets/cards_portfolio.dart';
 
 class ListCardsPortfolio extends StatefulWidget {
   const ListCardsPortfolio({

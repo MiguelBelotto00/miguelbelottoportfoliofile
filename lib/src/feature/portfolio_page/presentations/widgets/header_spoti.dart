@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:miguelbelotto00/extensions/utils.dart';
-import 'package:miguelbelotto00/src/commons/commons.dart';
+import 'package:portfolio_miguel_belotto/core/styles/project_colors.dart';
+import 'package:portfolio_miguel_belotto/core/styles/styles.dart';
+import 'package:portfolio_miguel_belotto/extensions/utils.dart';
 
 class HeaderSpoti extends StatefulWidget {
   const HeaderSpoti({super.key});
@@ -20,7 +20,7 @@ class _HeaderSpotiState extends State<HeaderSpoti> {
           end: Alignment.bottomCenter,
           colors: [
             Color.fromARGB(122, 206, 33, 33),
-            Commons.colorBackgroundHigligth,
+            ProjectColors.colorBackgroundHigligth,
           ],
         ),
       ),
@@ -58,34 +58,19 @@ class _HeaderSpotiState extends State<HeaderSpoti> {
               children: [
                 Text(
                   'Hola, soy',
-                  style: GoogleFonts.sourceSans3(
-                    color: Commons.colorWhiteBase,
-                    fontSize: context.width * 0.012,
-                  ),
+                  style: Styles.textBoldStyle,
                 ),
                 Text(
                   'Miguel Belotto',
-                  style: GoogleFonts.sourceSans3(
-                    color: Commons.colorWhiteBase,
-                    fontSize: context.width * 0.03,
-                    fontWeight: FontWeight.bold,
-                  ),
+                  style: Styles.textBoldStyle,
                 ),
                 Text(
                   'Desarrollador Dart - Flutter',
-                  style: GoogleFonts.sourceSans3(
-                    color: Commons.colorTextSecondary,
-                    fontSize: context.width * 0.02,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: Styles.textBoldStyle,
                 ),
                 Text(
                   '''Además de Flutter también utilizo: SQL,NoSQL,Git,Java y Kotlin.''',
-                  style: GoogleFonts.sourceSans3(
-                    color: Commons.colorTextSecondary,
-                    fontSize: context.width * 0.01,
-                    fontWeight: FontWeight.w500,
-                  ),
+                  style: Styles.textBoldStyle,
                 ),
               ],
             ),

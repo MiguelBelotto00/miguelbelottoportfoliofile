@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:miguelbelotto00/extensions/utils.dart';
+import 'package:portfolio_miguel_belotto/core/styles/styles.dart';
 
 class IconsRow extends StatefulWidget {
   const IconsRow({
@@ -39,9 +38,8 @@ class _IconsRowState extends State<IconsRow> {
             padding: const EdgeInsets.all(8),
             child: Text(
               widget.textReceive,
-              style: GoogleFonts.sourceSans3(
+              style: Styles.subtitleBoldStyle.copyWith(
                 color: _isHovering ? Colors.white : Colors.grey,
-                fontSize: context.width * 0.015,
               ),
             ),
           ),

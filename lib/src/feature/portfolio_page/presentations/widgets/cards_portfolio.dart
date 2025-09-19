@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:miguelbelotto00/extensions/utils.dart';
-import 'package:miguelbelotto00/src/commons/commons.dart';
-import 'package:miguelbelotto00/src/feature/portfolio_page/models/list_of_projects.dart';
+import 'package:portfolio_miguel_belotto/core/styles/project_colors.dart';
+import 'package:portfolio_miguel_belotto/core/styles/styles.dart';
+import 'package:portfolio_miguel_belotto/src/feature/portfolio_page/data/models/list_of_projects.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class CardsPortfolio extends StatefulWidget {
@@ -41,7 +40,7 @@ class _CardsPortfolioState extends State<CardsPortfolio> {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           color: _isHovering
-              ? Commons.colorBackgroundHigligth
+              ? ProjectColors.colorBackgroundHigligth
               : Colors.transparent,
         ),
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
@@ -65,20 +64,12 @@ class _CardsPortfolioState extends State<CardsPortfolio> {
             const Padding(padding: EdgeInsets.all(15)),
             Text(
               widget.project.titleCard,
-              style: GoogleFonts.sourceSans3(
-                fontSize: context.width * 0.015,
-                color: Commons.colorWhiteBase,
-                fontWeight: FontWeight.w700,
-              ),
+              style: Styles.textBoldStyle,
               textAlign: TextAlign.center,
             ),
             Text(
               widget.project.lenguageDev,
-              style: GoogleFonts.sourceSans3(
-                fontSize: context.width * 0.01,
-                color: Commons.colorTextSecondary,
-                fontWeight: FontWeight.w500,
-              ),
+              style: Styles.textBoldStyle,
               textAlign: TextAlign.center,
             ),
           ],
